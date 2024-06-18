@@ -15,5 +15,6 @@ This project analyzes the resource usage data of various machines and generates 
    ```sh
    pip install pandas matplotlib
 3. Run the script:
+   ```sh
    cd scripts
    python usage_report.py
