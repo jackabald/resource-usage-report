@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 # Define file paths
-data_file_path = os.path.join('..', 'data', 'test_data.csv')
+data_file_path = os.path.join('..', 'data', 'status.csv')
 cpu_usage_report_path = os.path.join('..', 'output', 'cpu_usage_report.pdf')
 disk_usage_report_path = os.path.join('..', 'output', 'disk_usage_report.pdf')
 cpu_usage_summary_path = os.path.join('..', 'output', 'cpu_usage_summary.csv')
@@ -32,7 +32,7 @@ data['CPU Usage'] = data['CPU Usage'].str.rstrip('%').astype('float')
 data['Disk Usage'] = data['Disk Usage'].str.extract(r'(\d+)%')[0].astype('float')
 
 # Use a subset of data for plotting to avoid rendering issues
-data_subset = data.head(50)  # Adjust number of rows as needed
+data_subset = data.head(1000)  # Adjust number of rows as needed
 
 # Generate summary statistics
 cpu_usage_summary = data[['Name', 'CPU Usage']].describe()
